@@ -39,3 +39,31 @@
   height: auto;
   cursor: pointer;
 }
+
+main {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 80px auto auto;
+  grid-template-areas:
+    "options options"
+    "intro aside"
+    "content content";
+  gap: 20px;
+}
+
+#options {
+  grid-area: options;
+}
+
+.intro {
+  grid-area: intro;
+}
+
+aside {
+  grid-area: aside;
+}
+
+.content {
+  grid-area: content;
+}
