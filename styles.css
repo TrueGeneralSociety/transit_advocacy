@@ -58,10 +58,12 @@ main {
 
 .intro {
   grid-area: intro;
+  background-color: green;
 }
 
 aside {
   grid-area: aside;
+  background-color: lightblue;
 }
 
 .content {
