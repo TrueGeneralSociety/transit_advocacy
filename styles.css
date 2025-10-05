@@ -1,4 +1,8 @@
 /* Horizontal nav bar*/
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
 nav {
   background-color: black;
   color: white;
@@ -22,11 +26,12 @@ nav a {
 
 .img_container {
   text-align: center;
-  background-color: orange;
+  background-color: rgb(255, 165, 0);
   display: inline-block;
   position: relative;
-  padding: 20px;
-  width: 100vw;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
 }
 .img_container img {
   width: 60%;
@@ -79,7 +84,12 @@ main {
 #options p{
   font-size: 1.5em;
   padding: 10px;
-  margin: 0;}
+  margin: 0;
+  color: white;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+}
 
 .intro {
   grid-area: intro;
@@ -98,4 +108,15 @@ aside {
   grid-area: content;
   background-color: lightgrey;
   padding: 10px;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  font-style: italic;
 }
