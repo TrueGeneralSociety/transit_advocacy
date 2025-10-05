@@ -3,12 +3,19 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
 }
+#nav_bar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  overflow: hidden;
+}
 nav {
   background-color: black;
   color: white;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
+  position: sticky;
 }
 nav ul {
   list-style-type: none;
@@ -22,7 +29,6 @@ nav a {
   text-decoration: none;
   font-weight: bold;
 }
-
 
 .img_container {
   text-align: center;
@@ -43,12 +49,14 @@ nav a {
 }
 .img_container h1 {
   position: absolute;
-  top: 80%;
-  left: 30%;
+  width: 50%;
+  top: 70%;
+  left: 20%;
   color: white;
-  font-size: 2.5em;
+  font-size: 2.5vw;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 10px;
+  border-radius: 10px;
 }
 
 #icon_container {
@@ -81,7 +89,7 @@ main {
   background-color: darkgrey;
 }
 
-#options p{
+#options p {
   font-size: 1.5em;
   padding: 10px;
   margin: 0;
@@ -102,6 +110,10 @@ aside {
   background-color: lightblue;
   padding: 10px;
   font-size: 2em;
+}
+#aside_container {
+  position: sticky;
+  top: 10px;
 }
 
 .content {
