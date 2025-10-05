@@ -11,7 +11,7 @@ nav ul {
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 15px;
+  gap: 3em;
 }
 nav a {
   color: white;
@@ -39,18 +39,11 @@ nav a {
 .img_container h1 {
   position: absolute;
   top: 80%;
-  left: 20%;
+  left: 30%;
   color: white;
   font-size: 2.5em;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 10px;
-}
-
-#options {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  background-color: darkgrey;
 }
 
 #icon_container {
@@ -58,16 +51,17 @@ nav a {
   float: left;
   justify-content: center;
   gap: 40px;
+  padding-top: 5px;
 }
 #icon_container img {
   width: 4vw;
-  height: auto;
+  height: 4vw;
 }
 
 main {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 80px auto auto;
+  grid-template-rows: 100px auto auto;
   grid-template-areas:
     "options options"
     "intro aside"
@@ -76,7 +70,16 @@ main {
 
 #options {
   grid-area: options;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  background-color: darkgrey;
 }
+
+#options p{
+  font-size: 1.5em;
+  padding: 10px;
+  margin: 0;}
 
 .intro {
   grid-area: intro;
