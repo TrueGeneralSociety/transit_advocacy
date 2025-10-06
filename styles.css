@@ -104,6 +104,17 @@ main {
   background-color: green;
   padding: 10px;
 }
+.intro hr {
+  border: 1px solid white;
+}
+
+.stickers {
+  display: block;
+  float: right;
+  width: 6vw;
+  height: auto;
+  margin-left: 20px;
+}
 
 aside {
   grid-area: aside;
@@ -132,3 +143,13 @@ footer {
   width: 100%;
   font-style: italic;
 }
+
+/* Responsive design for smaller screens */
+@media (min-width: 701px) and (max-width: 1280px) {
+  
+}
+
+@media (max-width: 700px) {
+
+}
+
