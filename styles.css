@@ -194,6 +194,36 @@ footer {
 
 /* Responsive design for mobile screens */
 @media (max-width: 700px) {
+  nav a {
+    font-size: 3vw;
+  }
+  main{
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+      "options"
+      "intro"
+      "aside"
+      "content";
+  }
+  .intro {
+    font-size: 3vw;
+  }
+  aside {
+    font-size: 3vw;
+  }
+  #options {
+    display: block;
+  }
+  #icon_container {
+    display: none;
+  }
+  #options p {
+    font-size: 3vw;
+  }
+  figure img {
+    max-width: 80%;
+  }
 
 }
 
