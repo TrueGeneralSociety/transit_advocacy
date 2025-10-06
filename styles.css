@@ -90,7 +90,7 @@ main {
 }
 
 #options p {
-  font-size: 1.5em;
+  font-size: 1.5vw;
   padding: 10px;
   margin: 0;
   color: white;
@@ -132,6 +132,22 @@ aside {
   grid-area: content;
   background-color: lightgrey;
   padding: 10px;
+}
+figure {
+  text-align: center;
+}
+figcaption {
+  font-style: italic;
+  font-size: 20px;
+  color: #555;
+}
+figure img {
+  max-width: 30%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+  opacity: 0.8;
+  margin-top: 10px;
 }
 
 footer {
