@@ -103,6 +103,7 @@ main {
   grid-area: intro;
   background-color: green;
   padding: 10px;
+  font-size: 1vw;
 }
 .intro hr {
   border: 1px solid white;
@@ -120,7 +121,7 @@ aside {
   grid-area: aside;
   background-color: lightblue;
   padding: 10px;
-  font-size: 2em;
+  font-size: 2vw;
 }
 #aside_container {
   position: sticky;
