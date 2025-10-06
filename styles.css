@@ -22,12 +22,13 @@ nav ul {
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 3em;
+  gap: 3vw;
 }
 nav a {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  font-size: 1.2vw;
 }
 
 .img_container {
@@ -161,11 +162,37 @@ footer {
   font-style: italic;
 }
 
-/* Responsive design for smaller screens */
+/* Responsive design for tablet screens */
 @media (min-width: 701px) and (max-width: 1280px) {
+  nav a {
+    font-size: 1.5vw;
+  }
+  main{
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+      "options"
+      "intro"
+      "aside"
+      "content";
+  }
+  .intro {
+    font-size: 1.5vw;
+  }
+  aside {
+    font-size: 1.5vw;
+  }
+  #options {
+    display: block;
+  }
+  #icon_container {
+    justify-content: space-around;
+    float: none;
+  }
   
 }
 
+/* Responsive design for mobile screens */
 @media (max-width: 700px) {
 
 }
