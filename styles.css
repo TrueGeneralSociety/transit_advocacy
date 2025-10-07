@@ -68,6 +68,7 @@ nav a:hover {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 10px;
   border-radius: 10px;
+  z-index: 999;
 }
 
 #icon_container {
@@ -246,7 +247,6 @@ footer {
     font-size: 3vw;
   }
   #logo {
-    float: top;
     text-align: center;
     color: white;
     font-size: 4vw;
