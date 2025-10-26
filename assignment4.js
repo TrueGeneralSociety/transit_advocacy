@@ -78,5 +78,5 @@ app.use(function (req, res, next) {
 // RUN SERVER
 let port = 8000;
 app.listen(port, function () {
-    console.log("Example app listening on port " + port + "!");
+    console.log("Assignment site listening on port " + port + "!");
 });
