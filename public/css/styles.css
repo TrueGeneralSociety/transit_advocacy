@@ -1,3 +1,13 @@
+/*Custom font import*/
+@font-face {
+  font-family: "Bitcount Prop Single Ink";
+  src: url("font/Bitcount_Grid_Single/static/BitcountGridSingle-Regular.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
   margin: auto;
   font-family: Arial, sans-serif;
