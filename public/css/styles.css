@@ -206,6 +206,21 @@ footer {
   font-style: italic;
 }
 
+button {
+  background-color: darkblue;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1vw;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
 /* Responsive design for tablet screens */
 @media (min-width: 701px) and (max-width: 1280px) {
   nav a {
