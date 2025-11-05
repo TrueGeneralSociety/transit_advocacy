@@ -29,3 +29,10 @@ function ajaxGET(url, callback) {
   xhr.open("GET", url); // localhost:8000/weekdays?format=html
   xhr.send();
 }
+
+readCarBtn.addEventListener("click", function () {
+  ajaxGET("/data/html fragments/car.html", function (response) {
+    //read car.html fragment into a variable
+    document.getElementById("read_more_car").innerHTML = response;
+  });
+});
