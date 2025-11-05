@@ -30,9 +30,21 @@ function ajaxGET(url, callback) {
   xhr.send();
 }
 
+let car_active = false;
 readCarBtn.addEventListener("click", function () {
-  ajaxGET("/data/html fragments/car.html", function (response) {
+  ajaxGET("/data/fragments/car.html", function (response) {
     //read car.html fragment into a variable
-    document.getElementById("read_more_car").innerHTML = response;
+    const carElem = document.getElementById("read_more_car");
+    if (carElem) {
+      if (car_active) {
+        carElem.innerHTML = "";
+        readCarBtn.innerHTML = "Read More";
+        car_active = false;
+      } else {
+        readCarBtn.innerHTML = "Read Less";
+        carElem.innerHTML = response;
+        car_active = true;
+      }
+    }
   });
 });
