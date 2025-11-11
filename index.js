@@ -13,6 +13,8 @@ app.use("/css", express.static("./public/css"));
 app.use("/img", express.static("./public/img"));
 // serve data (HTML fragments and JSON) so client can request /data/...
 app.use("/data", express.static("./app/data"));
+// serve HTML pages under app/html so links like /html/metros.html work
+app.use("/html", express.static("./app/html"));
 
 app.get("/", function (req, res) {
   //console.log(process.env);
