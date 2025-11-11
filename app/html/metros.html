@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Transit Advocacy</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+
+    <!-- Custom fonts (Deprecated, using font-face now)-->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" /> -->
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> -->
+    <!-- <link -->
+    <!-- href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single+Ink:wght@100..900&display=swap" -->
+    <!-- rel="stylesheet" -->
+    <!-- /> -->
+  </head>
+  <body>
+    <!--Website about transit advocacy and the dangers of car-centric infrastructure-->
+    <header>
+      <div id="nav_bar">
+        <nav>
+          <div id="logo">
+            <span>Transit Advocacy</span>
+          </div>
+
+          <ul>
+            <li>
+              <img src="/img/pngs/icons8-transit-48.png" alt="transit icon" />
+            </li>
+            <li><a href="#advocacy">Advocacy</a></li>
+            <li><a href="#pre_war">Pre-war urbanism</a></li>
+            <li><a href="#modern">Modern urbanism</a></li>
+            <li>
+              <a href="#dangers">Dangers of Car-Centric Infrastructure</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="metros_section">
+        <h2>Major Metro Systems Around the World</h2>
+        <div id="metros_container">
+          <template>
+            <div class="metro_card">
+              <img
+                src="/img/metros/{{image}}"
+                alt="Image of {{name}} Metro"
+                class="metro_image"
+              />
+              <h3 class="metro_name">{{name}} Metro</h3>
+              <div class="metro_details">
+                <!-- AJAX -->
+              </div>
+              <button>
+                Read More
+                <span class="arrow">→</span>
+              </button>
+            </div>
+          </template>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Transit Advocacy. All rights reserved.</p>
+    </footer>
+
+    <script src="/js/client.js"></script>
+  </body>
+</html>
