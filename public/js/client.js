@@ -162,3 +162,150 @@ readTrainBtn.addEventListener("click", function () {
     }
   });
 });
+
+///////////////////////////////////////////////////
+// document.querySelector("#marker").addEventListener("click", function (e) {
+//     ajaxGET("/markers", function (data) {
+//         // this call is JSON so we have to parse it:
+//         let parsedData = JSON.parse(data);
+
+//         // as a table
+//         let str = "<table>";
+//         for(let i = 0; i < parsedData.length; i++) {
+//             let item = parsedData[i];
+//             str += "<tr><td>" + item["title"] + "</td><td>" + item["lat"] + "</td><td>" + item["lng"]
+//                 + "</td><td>" + item["description"]
+//                 + "</td><td><img alt='ship' src='" + item["image"] + "'/></td></tr>";
+//         }
+//         str += "</table>";
+
+//         // as a sequence of div elements
+// //        let str = "";
+// //        for(let i = 0; i < parsedData.length; i++) {
+// //            let item = parsedData[i];
+// //            str += "<div><p>" + item["title"] + "</p><p>" + item["lat"]
+// //              + "</p></div>";
+// //        }
+
+//         document.getElementById("marker-data").innerHTML = str;
+
+//         //let d1 = document.createElement("div");
+//         //d1.innerHTML = str;
+//         //document.body.appendChild(d1);
+//         //console.log("after parsing", parsedData);
+//     });
+// });
+// Metro details functionality
+/**
+ *
+ * @param {*} metro - single metro object in the JSON array
+ * @param {String} place - place identifier to target the correct details section
+ */
+async function showMetroDetails(metro, place) {
+  try {
+    // Build a <ul> element with metro details
+    let str =
+      "<ul>" +
+      "<li><strong>Title: </strong>" +
+      metro["title"] +
+      "</li>" +
+      "<li><strong>Year Opened: </strong>" +
+      metro["yearOpened"] +
+      "</li>" +
+      "<li><strong>System Length: </strong>" +
+      metro["systemLength"] +
+      "km</li>" +
+      "<li><strong>Number of Stations: </strong>" +
+      metro["numStations"] +
+      "</li>" +
+      "<li><strong>Annual Ridership: </strong>" +
+      metro["annualRidership"] +
+      "</li>" +
+      "<li><strong>Description: </strong>" +
+      metro["description"] +
+      "</li>" +
+      "</ul>";
+    const detailsSection = document.getElementById(place + "_details");
+    detailsSection.innerHTML = str;
+  } catch (error) {
+    console.error("Error displaying metro details:", error);
+  }
+}
+
+// Attach event listeners to metro buttons
+document
+  .getElementById("shanghai_button")
+  .addEventListener("click", function () {
+    ajaxGET("/data/metros.json", function (data) {
+      let parsedMetros = JSON.parse(data);
+      const metro = parsedMetros[0];
+      showMetroDetails(metro, "shanghai");
+    });
+  });
+document.getElementById("paris_button").addEventListener("click", function () {
+  ajaxGET("/data/metros.json", function (data) {
+    let parsedMetros = JSON.parse(data);
+    const metro = parsedMetros[6];
+    showMetroDetails(metro, "paris");
+  });
+});
+document
+  .getElementById("new_york_button")
+  .addEventListener("click", function () {
+    ajaxGET("/data/metros.json", function (data) {
+      let parsedMetros = JSON.parse(data);
+      const metro = parsedMetros[2];
+      showMetroDetails(metro, "new_york");
+    });
+  });
+document.getElementById("tokyo_button").addEventListener("click", function () {
+  ajaxGET("/data/metros.json", function (data) {
+    let parsedMetros = JSON.parse(data);
+    const metro = parsedMetros[3];
+    showMetroDetails(metro, "tokyo");
+  });
+});
+document.getElementById("london_button").addEventListener("click", function () {
+  ajaxGET("/data/metros.json", function (data) {
+    let parsedMetros = JSON.parse(data);
+    const metro = parsedMetros[1];
+    showMetroDetails(metro, "london");
+  });
+});
+document.getElementById("berlin_button").addEventListener("click", function () {
+  ajaxGET("/data/metros.json", function (data) {
+    let parsedMetros = JSON.parse(data);
+    const metro = parsedMetros[8];
+    showMetroDetails(8, "berlin");
+  });
+});
+document.getElementById("madrid_button").addEventListener("click", function () {
+  ajaxGET("/data/metros.json", function (data) {
+    let parsedMetros = JSON.parse(data);
+    const metro = parsedMetros[9];
+    showMetroDetails(9, "madrid");
+  });
+});
+document.getElementById("moscow_button").addEventListener("click", function () {
+  ajaxGET("/data/metros.json", function (data) {
+    let parsedMetros = JSON.parse(data);
+    const metro = parsedMetros[4];
+    showMetroDetails(metro, "moscow");
+  });
+});
+document.getElementById("seoul_button").addEventListener("click", function () {
+  ajaxGET("/data/metros.json", function (data) {
+    let parsedMetros = JSON.parse(data);
+    const metro = parsedMetros[7];
+    showMetroDetails(7, "seoul");
+  });
+});
+document
+  .getElementById("beijing_button")
+  .addEventListener("click", function () {
+    ajaxGET("/data/metros.json", function (data) {
+      let parsedMetros = JSON.parse(data);
+      const metro = parsedMetros[5];
+      showMetroDetails(metro, "beijing");
+    });
+  });
