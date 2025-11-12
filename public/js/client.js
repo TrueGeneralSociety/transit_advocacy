@@ -1,5 +1,3 @@
-console.log("Client script loaded.");
-
 //DOM elements
 const readCarBtn = document.getElementById("read_car");
 const readBikeBtn = document.getElementById("read_bike");
@@ -23,7 +21,7 @@ function ajaxGET(url, callback) {
       value = this.responseText;
       callback(this.responseText);
     } else {
-      console.log(this.status);
+      //console.log(this.status);
     }
   };
   xhr.open("GET", url); // localhost:8000/weekdays?format=html
