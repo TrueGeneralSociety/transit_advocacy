@@ -226,8 +226,23 @@ button {
   gap: 20px;
   justify-content: center;
   margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: center;
 }
-
+.metro_card {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 18vw;
+  padding: 10px;
+  text-align: center;
+}
+.metro_card h3 {
+  margin-top: 10px;
+  font-size: 1.2vw;
+}
 /* Responsive design for tablet screens */
 @media (min-width: 701px) and (max-width: 1280px) {
   nav a {
@@ -269,6 +284,15 @@ button {
     font-size: 3vw;
   }
   .content {
+    font-size: 2vw;
+  }
+  .metro_card {
+    width: 40vw;
+  }
+  .metro_card .read_more_button {
+    font-size: 2vw;
+  }
+  .metro_card h3 {
     font-size: 2vw;
   }
 }
@@ -324,6 +348,15 @@ button {
     font-size: 4vw;
   }
   .content {
+    font-size: 3vw;
+  }
+  .metro_card {
+    width: 80vw;
+  }
+  .metro_card .read_more_button {
+    font-size: 3vw;
+  }
+  .metro_card h3 {
     font-size: 3vw;
   }
 }
