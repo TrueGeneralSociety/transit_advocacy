@@ -59,8 +59,6 @@ function ajaxGET(url, callback) {
  * @param {String} place - place identifier to target the correct details section
  */
 function showMetroDetails(metro, place) {
-  console.log("Showing metro details for:", place);
-
   // Build a <ul> element with metro details
   let str =
     "<ul>" +
@@ -87,6 +85,11 @@ function showMetroDetails(metro, place) {
   detailsSection.innerHTML = str;
 }
 
+function hideMetroDetails(place) {
+  const detailsSection = document.getElementById(place + "_details");
+  detailsSection.innerHTML = "";
+}
+
 //DOM elements for metro buttons
 shanghai_button = document.getElementById("shanghai_button");
 paris_button = document.getElementById("paris_button");
@@ -101,73 +104,132 @@ london_button = document.getElementById("london_button");
 
 // Attach event listeners to metro buttons
 shanghai_button.addEventListener("click", function () {
-  console.log("Shanghai button clicked.");
   ajaxGET("/data/metros.js", function (data) {
     let parsedMetros = JSON.parse(data);
     const metro = parsedMetros[0];
-    showMetroDetails(metro, "shanghai");
+    if (shanghai_button.innerHTML === "Read More") {
+      showMetroDetails(metro, "shanghai");
+      shanghai_button.innerHTML = "Read Less";
+    } else {
+      hideMetroDetails("shanghai");
+      shanghai_button.innerHTML = "Read More";
+    }
   });
 });
 paris_button.addEventListener("click", function () {
   ajaxGET("/data/metros.js", function (data) {
     let parsedMetros = JSON.parse(data);
     const metro = parsedMetros[6];
-    showMetroDetails(metro, "paris");
+    if (paris_button.innerHTML === "Read More") {
+      showMetroDetails(metro, "paris");
+      paris_button.innerHTML = "Read Less";
+    } else {
+      hideMetroDetails("paris");
+      paris_button.innerHTML = "Read More";
+    }
   });
 });
 new_york_button.addEventListener("click", function () {
   ajaxGET("/data/metros.js", function (data) {
     let parsedMetros = JSON.parse(data);
     const metro = parsedMetros[2];
-    showMetroDetails(metro, "new_york");
+    if (new_york_button.innerHTML === "Read More") {
+      showMetroDetails(metro, "new_york");
+      new_york_button.innerHTML = "Read Less";
+    } else {
+      hideMetroDetails("new_york");
+      new_york_button.innerHTML = "Read More";
+    }
   });
 });
 tokyo_button.addEventListener("click", function () {
   ajaxGET("/data/metros.js", function (data) {
     let parsedMetros = JSON.parse(data);
     const metro = parsedMetros[3];
-    showMetroDetails(metro, "tokyo");
+    if (tokyo_button.innerHTML === "Read More") {
+      showMetroDetails(metro, "tokyo");
+      tokyo_button.innerHTML = "Read Less";
+    } else {
+      hideMetroDetails("tokyo");
+      tokyo_button.innerHTML = "Read More";
+    }
   });
 });
 london_button.addEventListener("click", function () {
   ajaxGET("/data/metros.js", function (data) {
     let parsedMetros = JSON.parse(data);
     const metro = parsedMetros[1];
-    showMetroDetails(metro, "london");
+    if (london_button.innerHTML === "Read More") {
+      showMetroDetails(metro, "london");
+      london_button.innerHTML = "Read Less";
+    } else {
+      hideMetroDetails("london");
+      london_button.innerHTML = "Read More";
+    }
   });
 });
 berlin_button.addEventListener("click", function () {
   ajaxGET("/data/metros.js", function (data) {
     let parsedMetros = JSON.parse(data);
     const metro = parsedMetros[8];
-    showMetroDetails(8, "berlin");
+    if (berlin_button.innerHTML === "Read More") {
+      showMetroDetails(metro, "berlin");
+      berlin_button.innerHTML = "Read Less";
+    } else {
+      hideMetroDetails("berlin");
+      berlin_button.innerHTML = "Read More";
+    }
   });
 });
 madrid_button.addEventListener("click", function () {
   ajaxGET("/data/metros.js", function (data) {
     let parsedMetros = JSON.parse(data);
     const metro = parsedMetros[9];
-    showMetroDetails(9, "madrid");
+    if (madrid_button.innerHTML === "Read More") {
+      showMetroDetails(metro, "madrid");
+      madrid_button.innerHTML = "Read Less";
+    } else {
+      hideMetroDetails("madrid");
+      madrid_button.innerHTML = "Read More";
+    }
   });
 });
 moscow_button.addEventListener("click", function () {
   ajaxGET("/data/metros.js", function (data) {
     let parsedMetros = JSON.parse(data);
     const metro = parsedMetros[4];
-    showMetroDetails(metro, "moscow");
+    if (moscow_button.innerHTML === "Read More") {
+      showMetroDetails(metro, "moscow");
+      moscow_button.innerHTML = "Read Less";
+    } else {
+      hideMetroDetails("moscow");
+      moscow_button.innerHTML = "Read More";
+    }
   });
 });
 seoul_button.addEventListener("click", function () {
   ajaxGET("/data/metros.js", function (data) {
     let parsedMetros = JSON.parse(data);
     const metro = parsedMetros[7];
-    showMetroDetails(7, "seoul");
+    if (seoul_button.innerHTML === "Read More") {
+      showMetroDetails(metro, "seoul");
+      seoul_button.innerHTML = "Read Less";
+    } else {
+      hideMetroDetails("seoul");
+      seoul_button.innerHTML = "Read More";
+    }
   });
 });
 beijing_button.addEventListener("click", function () {
   ajaxGET("/data/metros.js", function (data) {
     let parsedMetros = JSON.parse(data);
     const metro = parsedMetros[5];
-    showMetroDetails(metro, "beijing");
+    if (beijing_button.innerHTML === "Read More") {
+      showMetroDetails(metro, "beijing");
+      beijing_button.innerHTML = "Read Less";
+    } else {
+      hideMetroDetails("beijing");
+      beijing_button.innerHTML = "Read More";
+    }
   });
 });
